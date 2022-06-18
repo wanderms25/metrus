@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  root:
+    build: ./root
+    command:  bash -c "npm start"
+    environment:
+      - CORSHEADER="http://localhost:9000"
+      - PROXY=true
+    ports:
+      - 9000:9000
+    volumes:
+      - node_modules:/root/node_modules
+      - .:/root/
+  navbar:
+    build: ./navbar
+    command:  bash -c "npm start"
+    environment:
+      - CORSHEADER="http://localhost:8500"
+      - PROXY=true
+    ports:
+      - 8500:8080
+    volumes:
+      - node_modules:/navbar/node_modules
+      - .:/navbar/
+volumes:
+  node_modules:
