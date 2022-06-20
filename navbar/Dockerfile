@@ -1,7 +1,7 @@
 FROM wanderms25/metrus-front
 
-ENV app /navbar
-RUN mkdir $app
+ENV app /app/navbar/
+
 WORKDIR $app
 
 VOLUME /app/node_modules

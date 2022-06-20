@@ -1,8 +1,6 @@
 FROM wanderms25/metrus-front
 
-RUN npm install --global create-single-spa
-
-ENV app /app
+ENV app /root/root
 
 WORKDIR $app
 

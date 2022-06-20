@@ -11,7 +11,7 @@ services:
       - 9000:9000
     volumes:
       - node_modules:/root/node_modules
-      - .:/root/
+      - .:/root
   navbar:
     build: ./navbar
     command:  bash -c "npm start"
@@ -22,6 +22,6 @@ services:
       - 8500:8080
     volumes:
       - node_modules:/navbar/node_modules
-      - .:/navbar/
+      - .:/app
 volumes:
   node_modules:
