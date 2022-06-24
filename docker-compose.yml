@@ -6,38 +6,39 @@ services:
     volumes:
       - node_modules:/root/node_modules
       - .:/spa
+    networks:
+      - service
   root:
     build: ./root
     command:  bash -c "npm start"
-    environment:
-      - CORSHEADER="http://localhost:9000"
-      - PROXY=true
     ports:
       - 9000:9000
     volumes:
       - node_modules:/root/node_modules
       - .:/root
+    networks:
+      - service
   navbar:
     build: ./navbar
     command:  bash -c "npm start"
-    environment:
-      - CORSHEADER="http://localhost:8500"
-      - PROXY=true
     ports:
       - 8500:8080
     volumes:
       - node_modules:/navbar/node_modules
       - .:/app
+    networks:
+      - service
   login:
     build: ./login
     command:  bash -c "npm start"
-    environment:
-      - CORSHEADER="http://localhost:3033"
-      - PROXY=true
     ports:
       - 3033:8080
     volumes:
       - node_modules:/login/node_modules
       - .:/login
+    networks:
+      - service
 volumes:
   node_modules:
+networks:
+  service:
