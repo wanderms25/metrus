@@ -1,4 +1,4 @@
-import { useState } from 'react';
+/* import { useState } from 'react';
 
 const Form = function () {
   const [userData, setUserData] = useState({});
@@ -14,7 +14,7 @@ const Form = function () {
     const password = senha.value;
     const data = { code: code, password: password };
 
-    const response = await fetch(`http://localhost:3001`,
+    const response = await fetch(`http://20.114.88.181:8080`,
       {
         method: 'POST',
         body: JSON.stringify(data),
@@ -54,4 +54,4 @@ const Form = function () {
   );
 };
 
-export default Form;
+export default Form; */

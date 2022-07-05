@@ -1,4 +1,4 @@
-import './root/src/css/taildwind.css';
+/* import './root/src/css/taildwind.css'; */
 
 export default function Root(props) {
   return <section>
